@@ -1,5 +1,7 @@
 # SISTEMA INTEGRAL DE DATOS VETERINARIA
 
+![banner](bannerVeterinaria.png)
+
 En el barrio Kennedy en la zona norte de la ciudad de Bucaramanga, la señora Sandra administra con dedicación y amor su veterinaria "Mi Primera Mascotica" la cual se encuentra ubicada en Calle 10 Norte #11-29 de la ciudad de bucaramanga, esta veterinaria unicamente se especializa en la atención de animales y prestación de servicios vaterios para especies tales como: Perros, gatos, hamsters, aves domesticas y peces. Este espacio ofrece una amplia gama de servicios, que van desde consultas de medicina general y especializada hasta un completo spa para mascotas, que incluye peluquería adaptada a todas las razas y tamaños, cortes de uñas, tratamientos capilares, masajes antiestrés, entre otros.
 
 En "Mi Primera Máscotica," también se brindan terapias de movilidad, servicios de vacunación, toma de exámenes con análisis llevados a cabo por un laboratorio externo, así como procedimientos quirúrgicos como castraciones, y otros procedimientos que son comunmente requeridos por las mascoticas.
@@ -10,28 +12,8 @@ Para simplificar el proceso de facturación y garantizar un pago eficiente por p
 
 Con una visión integral que abarca desde cuidados médicos hasta productos esenciales, "Mi Primera Máscotica" se consolida como el lugar ideal para el bienestar y la felicidad de las mascotas en el norte de Bucaramanga.
 
-## **Modelo Conceptual**
 
-1. Se necesita una lista de clientes que incluya sus nombres, direccion, número de teléfono y correos electrónicos para la facturación.
-2. Para las mascotas, se requiere un espacio para registrar el nombre, especie, raza, edad y alergias, crucial para evitar errores en medicamentos o procedimientos.
-3. Se necesita un sistema para agendar citas para algunos de los servicios.
-4. Es esencial tener información completa sobre veterinarios, auxiliares, esteticistas, incluyendo nombres, especialidades y los datos necesarios para manejar bien los empleados de esta veterinaria.
-5. Debe existir una lista de medicamentos y sus cantidades disponibles para atender las necesidades de las mascotas.
-6. Si un veterinario receta medicamentos, es necesario registrar el medicamento, la fecha de la receta, duración del tratamiento, cantidades y recomendaciones de consumo.
-7. Se necesita un registro de las vacunas que brindamos en el servicio de vacunacion.
-8. Se debe registrar cualquier procedimiento realizado en las mascotas.
-9. Un registro de laboratorios externos a los que se envían pruebas, incluyendo tipo de examen, laboratorio y resultados.
-10. Es necesario llevar un registro de servicios como baños o cortes de pelo.
-11. Para mantener un registro completo del negocio, se requiere un registro de precios de medicamentos, procedimientos, consultas, servicios esteticos y vacunaciones.
-12. En resumen, se necesita un sistema que mantenga todo organizado y accesible, permitiendo un fácil acceso a la información de cada mascota cuando sea necesario, asegurando así la atención adecuada.
-
-## Modelo antes de normalizacion
-
-![modelo fisico veterinaria.png](primerModeloFisico.png)
-
-## Modelo normalizado
-
-## Servicios que se prestaran en la Veterinaria
+## Servicios que presta la Veterinaria
 
 - Corte y cepillado perro raza pequeña
 - Corte y cepillado perro raza mediana
@@ -180,3 +162,26 @@ Con una visión integral que abarca desde cuidados médicos hasta productos esen
 - Cirugía de Patas y Garras gato
 - Cirugía de Patas y Garras ave domestica
 - Cirugía de Pico aves domésticas
+
+## **Modelo Conceptual**
+
+1. Se necesita una lista de clientes que incluya sus nombres, direccion, número de teléfono y correos electrónicos para la facturación.
+2. Para las mascotas, se requiere un espacio para registrar el nombre, especie, raza, edad y alergias, crucial para evitar errores en medicamentos o procedimientos.
+3. Se necesita un sistema para agendar citas para algunos de los servicios.
+4. Es esencial tener información completa sobre veterinarios, auxiliares, esteticistas, incluyendo nombres, especialidades y los datos necesarios para manejar bien los empleados de esta veterinaria.
+5. Debe existir una lista de medicamentos y sus cantidades disponibles para atender las necesidades de las mascotas.
+6. Si un veterinario receta medicamentos, es necesario registrar el medicamento, la fecha de la receta, duración del tratamiento, cantidades y recomendaciones de consumo.
+7. Se necesita un registro de las vacunas que brindamos en el servicio de vacunacion.
+8. Se debe registrar cualquier procedimiento realizado en las mascotas.
+9. Un registro de laboratorios externos a los que se envían pruebas, incluyendo tipo de examen, laboratorio y resultados.
+10. Es necesario llevar un registro de servicios como baños o cortes de pelo.
+11. Para mantener un registro completo del negocio, se requiere un registro de precios de medicamentos, procedimientos, consultas, servicios esteticos y vacunaciones.
+12. En resumen, se necesita un sistema que mantenga todo organizado y accesible, permitiendo un fácil acceso a la información de cada mascota cuando sea necesario, asegurando así la atención adecuada.
+
+## Modelo antes de normalizacion
+
+![modelo fisico veterinaria.png](primerModeloFisico.png)
+
+## Modelo normalizado
+
+En proceso...
