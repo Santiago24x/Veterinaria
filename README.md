@@ -1,8 +1,8 @@
-# SISTEMA INTEGRAL DE DATOS VETERINARIA
+# **SISTEMA INTEGRAL DE DATOS VETERINARIA**
 
 ![banner](bannerVeterinaria.png)
 
-En el barrio Kennedy en la zona norte de la ciudad de Bucaramanga, la señora Sandra administra con dedicación y amor su veterinaria "Mi Primera Mascotica" la cual se encuentra ubicada en Calle 10 Norte #11-29 de la ciudad de bucaramanga, esta veterinaria unicamente se especializa en la atención de animales y prestación de servicios vaterios para especies tales como: Perros, gatos, hamsters, aves domesticas y peces. Este espacio ofrece una amplia gama de servicios, que van desde consultas de medicina general y especializada hasta un completo spa para mascotas, que incluye peluquería adaptada a todas las razas y tamaños, cortes de uñas, tratamientos capilares, masajes antiestrés, entre otros.
+La señora Sandra administra con dedicación y amor su veterinaria"Mi Primera Mascotica" la cual se encuentra ubicada en Calle 10 Norte #11-29 de la ciudad de bucaramanga, esta veterinaria unicamente se especializa en la atención estetica e higienica de animales y prestación de servicios vaterios para especies tales como: Perros, gatos, hamsters, aves domesticas y peces. Este espacio ofrece una amplia gama de servicios, que van desde consultas de medicina general y especializada hasta un completo spa para mascotas, que incluye peluquería adaptada a todas las razas y tamaños, cortes de uñas, tratamientos capilares, masajes antiestrés, entre otros.
 
 En "Mi Primera Máscotica," también se brindan terapias de movilidad, servicios de vacunación, toma de exámenes con análisis llevados a cabo por un laboratorio externo, así como procedimientos quirúrgicos como castraciones, y otros procedimientos que son comunmente requeridos por las mascoticas.
 
@@ -10,10 +10,12 @@ Con el objetivo de ofrecer un servicio más personalizado y estrechar la relaci�
 
 Para simplificar el proceso de facturación y garantizar un pago eficiente por parte de los dueños, se solicitan los datos más relevantes, incluidos los de contacto y, en caso de preferencia, el correo electrónico para el envío de facturación electrónica.
 
+Y como plus manejamos una historia clinica para que el cliente se fidelice y sepa que procedimientos ha tenido su mascota dentro de esta veterinaria
+
 Con una visión integral que abarca desde cuidados médicos hasta productos esenciales, "Mi Primera Máscotica" se consolida como el lugar ideal para el bienestar y la felicidad de las mascotas en el norte de Bucaramanga.
 
 
-## Servicios que presta la Veterinaria
+## **Servicios que presta la Veterinaria**
 
 - Corte y cepillado perro raza pequeña
 - Corte y cepillado perro raza mediana
@@ -162,6 +164,12 @@ Con una visión integral que abarca desde cuidados médicos hasta productos esen
 - Cirugía de Patas y Garras gato
 - Cirugía de Patas y Garras ave domestica
 - Cirugía de Pico aves domésticas
+- Consulta para Aves Domésticas
+- Consulta para Aves Perros
+- Consulta para gatos
+- Consulta para hamsters
+- Consulta para peces
+
 
 ## **Modelo Conceptual**
 
@@ -178,10 +186,138 @@ Con una visión integral que abarca desde cuidados médicos hasta productos esen
 11. Para mantener un registro completo del negocio, se requiere un registro de precios de medicamentos, procedimientos, consultas, servicios esteticos y vacunaciones.
 12. En resumen, se necesita un sistema que mantenga todo organizado y accesible, permitiendo un fácil acceso a la información de cada mascota cuando sea necesario, asegurando así la atención adecuada.
 
-## Modelo antes de normalizacion
+## **Modelo antes de normalizacion**
 
 ![modelo fisico veterinaria.png](primerModeloFisico.png)
 
-## Modelo normalizado
+## **Modelo normalizado**
 
-En proceso...
+![modelo fisico veterinaria normalizado.png](modeloFisicoVeterinariaNormalizado.png)
+
+## **Modelo logico**
+
+### **`vacunas`**
+
+- Atributos:
+  - `id` (PK): Identificador único de la vacuna.
+  - `Nombre`: Nombre de la vacuna.
+  - `Posologia`: Posología de la vacuna.
+  - `Descripcion`: Descripción de la vacuna.
+  - `cantidad`: Cantidad disponible de la vacuna.
+  - `precio`: Precio de la vacuna.
+
+### **`tipoServicios`**
+
+- Atributos:
+  - `id` (PK): Identificador único del tipo de servicio.
+  - `nombre`: Nombre del tipo de servicio.
+  - `categoria`: Categoría del servicio (Laboratorios, Vacunacion, Estetica, Consultas, Quirurgicos).
+  - `descripcion`: Descripción del tipo de servicio.
+  - `precio`: Precio del servicio.
+  - `prestadorServicio`: Nombre del prestador de servicios (opcional).
+  - `direccionPrestadorServicio`: Dirección del prestador de servicios (opcional).
+
+### **`detalleMascota`**
+
+- Atributos:
+  - `id` (PK): Identificador único del detalle de la mascota.
+  - `tipo`: Tipo de mascota (perro, gato, ave, hamster, pez).
+  - `raza`: Raza de la mascota (opcional).
+
+### **`empleados`**
+
+- Atributos:
+  - `id` (PK): Identificador único del empleado.
+  - `nombre`: Nombre del empleado.
+  - `apellidos`: Apellidos del empleado.
+  - `cargo`: Cargo del empleado (Veterinario, Auxiliar, Esteticista).
+  - `especialidad`: Especialidad del empleado (opcional).
+  - `telefono`: Número de teléfono del empleado (opcional).
+  - `correo`: Dirección de correo electrónico del empleado (opcional).
+
+### **`clientes`**
+
+- Atributos:
+  - `id` (PK): Identificador único del cliente.
+  - `nombre`: Nombre del cliente.
+  - `direccion`: Dirección del cliente.
+  - `correoFacturacionElectronica`: Correo electrónico para facturación electrónica (opcional).
+  - `telefonoContacto`: Número de teléfono de contacto del cliente.
+
+### **`alergias`**
+
+- Atributos:
+  - `tipoAlergia`: Tipo de alergia (Alimentaria, Ambiental, Insectos, Medicamentos, Materiales, Contacto).
+  - `Nombre`: Nombre de la alergia.
+  - `descripcion`: Descripción de la alergia.
+  - `id` (PK): Identificador único de la alergia.
+
+### **`medicamentos`**
+
+- Atributos:
+  - `id` (PK): Identificador único del medicamento.
+  - `nombre`: Nombre del medicamento.
+  - `Posologia`: Posología del medicamento.
+  - `Descripcion`: Descripción del medicamento.
+  - `concentracion`: Concentración del medicamento.
+  - `Precio`: Precio del medicamento.
+  - `cantidad`: Cantidad disponible del medicamento.
+
+### **`mascota`**
+
+- Atributos:
+  - `id` (PK): Identificador único de la mascota.
+  - `nombre`: Nombre de la mascota.
+  - `añoNacimiento`: Año de nacimiento de la mascota.
+  - `detalleMascota_id`: Referencia al detalle de la mascota.
+  - `clientes_id`: Referencia al cliente propietario de la mascota.
+
+### **`alergias_has_mascota`**
+
+- Atributos:
+  - `alergias_id` (PK, FK): Referencia a la alergia.
+  - `mascota_id` (PK, FK): Referencia a la mascota.
+
+### **`citas`**
+
+- Atributos:
+  - `id` (PK): Identificador único de la cita.
+  - `fecha_hora`: Fecha y hora de la cita.
+  - `estado`: Estado de la cita (completada, cancelada, pendiente).
+  - `mascota_id` (FK): Referencia a la mascota.
+  - `tipo`: Tipo de cita (prioritaria, comun).
+
+### **`servicios`**
+
+- Atributos:
+  - `id` (PK): Identificador único del servicio.
+  - `fechaEjecucion`: Fecha de ejecución del servicio.
+  - `citas_id` (FK): Referencia a la cita asociada al servicio.
+
+### **`historialmedico`**
+
+- Atributos:
+  - `id` (PK): Identificador único del historial médico.
+  - `motivoConsulta`: Motivo de la consulta.
+  - `peso`: Peso del paciente.
+  - `temperatura`: Temperatura del paciente.
+  - `diagnostico`: Diagnóstico del paciente.
+  - `servicios_id` (FK): Referencia al servicio asociado al historial médico.
+
+### **`recetas`**
+
+- Atributos:
+  - `medicamento_id` (PK, FK): Referencia al medicamento en la receta.
+  - `duracionTratamiento`: Duración del tratamiento.
+  - `recomendacionesConsumo`: Recomendaciones de consumo.
+  - `id` (PK): Identificador único de la receta.
+
+### **`detalleServicio`**
+
+- Atributos:
+  - `servicios_id` (PK, FK): Referencia al servicio asociado.
+  - `tipoServicios_id` (FK): Referencia al tipo de servicio asociado.
+  - `empleados_id` (FK): Referencia al empleado asociado.
+  - `recetas_id` (FK): Referencia a la receta asociada (opcional).
+  - `link_resultados_examen`: Enlace a los resultados del examen (opcional).
+  - `vacunas_id` (FK): Referencia a la vacuna asociada (opcional).
