@@ -321,3 +321,456 @@ Con una visión integral que abarca desde cuidados médicos hasta productos esen
   - `recetas_id` (FK): Referencia a la receta asociada (opcional).
   - `link_resultados_examen`: Enlace a los resultados del examen (opcional).
   - `vacunas_id` (FK): Referencia a la vacuna asociada (opcional).
+
+
+
+## **Consultas**
+
+**Consultas tabla vacunas**
+<details>
+<summary>CRUD</summary>
+
+Insertar una nueva vacuna:
+
+```sql
+INSERT INTO vacunas (Nombre, Posologia, Descripcion, cantidad, precio)
+VALUES ('NuevaVacuna', 'PosologiaNueva', 'DescripcionNueva', 10, 19.99);
+```
+
+Leer todas las vacunas:
+
+```sql
+SELECT * FROM vacunas;
+```
+
+Actualizar una vacuna existente:
+
+```sql
+UPDATE vacunas
+SET Nombre = 'VacunaActualizada', Posologia = 'PosologiaActualizada', Descripcion = 'DescripcionActualizada', cantidad = 15, precio = 24.99
+WHERE id = 1;
+```
+
+Eliminar una vacuna:
+
+```sql
+DELETE FROM vacunas WHERE id = 1;
+```
+</details>
+
+**Consultas tabla  tipoServicios**
+<details>
+<summary>CRUD</summary>
+
+Insertar una nueva tipoServicios:
+
+```sql
+INSERT INTO tipoServicios (nombre, categoria, descripcion, precio, prestadorServicio, direccionPrestadorServicio)
+VALUES ('NuevoServicio', 'Estetica', 'DescripcionNueva', 49.99, 'PrestadorNuevo', 'DireccionNueva');
+```
+
+Leer todas los tipoServicios:
+
+```sql
+SELECT * FROM tipoServicios;
+```
+
+Actualizar un tipoServicio existente:
+
+```sql
+UPDATE tipoServicios
+SET nombre = 'ServicioActualizado', categoria = 'Consultas', descripcion = 'DescripcionActualizada', precio = 59.99, prestadorServicio = 'NuevoPrestador', direccionPrestadorServicio = 'NuevaDireccion'
+WHERE id = 1;
+```
+
+Eliminar un tipoServicio:
+
+```sql
+DELETE FROM tipoServicios WHERE id = 1;
+```
+</details>
+
+**Consultas tabla detalleMascota**
+<details>
+<summary>CRUD</summary>
+Insertar un nuevo detalleMascota:
+
+```sql
+INSERT INTO detalleMascota (id, tipo, raza)
+VALUES (1, 'perro', 'Labrador');
+```
+
+Leer todos los detalleMascota:
+
+```sql
+SELECT * FROM detalleMascota;
+```
+
+Actualizar un detalleMascota existente:
+
+```sql
+UPDATE detalleMascota
+SET tipo = 'gato', raza = 'Siames'
+WHERE id = 1;
+```
+
+Eliminar un detalleMascota:
+
+```sql
+DELETE FROM detalleMascota WHERE id = 1;
+```
+</details>
+
+
+**Consultas tabla empleados**
+<details>
+<summary>CRUD</summary>
+Insertar un nuevo empleado:
+
+```sql
+INSERT INTO empleados (id, nombre, apellidos, cargo, especialidad, telefono, correo)
+VALUES (1, 'NuevoEmpleado', 'ApellidosNuevo', 'Veterinario', 'General', '123456789', 'nuevoempleado@example.com');
+```
+
+Leer todos los empleados:
+
+```sql
+SELECT * FROM empleados;
+```
+
+Actualizar un empleado existente:
+
+```sql
+UPDATE empleados
+SET nombre = 'NombreActualizado', apellidos = 'ApellidosActualizados', cargo = 'Esteticista', especialidad = 'Dermatología', telefono = '987654321', correo = 'empleadoactualizado@example.com'
+WHERE id = 1;
+```
+
+Eliminar un empleado:
+
+```sql
+DELETE FROM empleados WHERE id = 1;
+```
+</details>
+
+**Consultas tabla clientess**
+<details>
+<summary>CRUD</summary>
+
+Insertar un nuevo cliente:
+
+```sql
+INSERT INTO clientes (id, nombre, direccion, correoFacturacionElectronica, telefonoContacto)
+VALUES (16548652, 'NuevoCliente', 'DireccionCliente', 'cliente@example.com', '123456789');
+```
+
+Leer todos los clientes:
+
+```sql
+SELECT * FROM clientes;
+```
+
+Actualizar un cliente existente:
+
+```sql
+UPDATE clientes
+SET nombre = 'NombreActualizado', direccion = 'DireccionActualizada', correoFacturacionElectronica = 'clienteactualizado@example.com', telefonoContacto = '987654321'
+WHERE id = 1;
+```
+
+Eliminar un cliente:
+
+```sql
+DELETE FROM clientes WHERE id = 1;
+```
+</details>
+
+**Consultas tabla alergias**
+
+<details>
+<summary>CRUD</summary>
+Insertar una nueva alergia:
+
+```sql
+INSERT INTO alergias (tipoAlergia, Nombre, descripcion, id)
+VALUES ('Alimentaria', 'NuevaAlergia', 'Descripción de la nueva alergia.', 1);
+```
+
+Leer todas las alergias:
+
+```sql
+SELECT * FROM alergias;
+```
+
+Actualizar una alergia:
+
+```sql
+UPDATE alergias
+SET tipoAlergia = 'Insectos', Nombre = 'AlergiaActualizada', descripcion = 'Descripción actualizada de la alergia.'
+WHERE id = 1;
+```
+
+Eliminar una alergia:
+
+```sql
+DELETE FROM alergias WHERE id = 1;
+```
+</details>
+
+
+**Consultas tabla medicamentos**
+
+<details>
+<summary>CRUD</summary>
+Insertar un medicamento :
+
+```sql
+INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Precio, cantidad)
+VALUES (1, 'NuevoMedicamento', 'PosologiaNueva', 'Descripción del nuevo medicamento.', 'ConcentracionNueva', 10.99, 50);
+```
+
+Leer todos los medicamentos:
+
+```sql
+SELECT * FROM medicamentos;
+```
+
+Actualizar un  medicamento:
+
+```sql
+UPDATE medicamentos 
+SET nombre = 'nuevo_nombre', Posologia = 'nueva_Posologia', Descripcion = 'nueva_Descripcion', concentracion = 'nueva_concentracion', Precio = nuevo_precio, cantidad = nueva_cantidad 
+WHERE id = id_existente;
+
+```
+
+Eliminar un medicamento:
+
+```sql
+DELETE FROM medicamentos WHERE id = 1;
+```
+</details>
+
+**Consultas tabla mascotas**
+
+<details>
+<summary>CRUD</summary>
+Insertar una mascota:
+
+```sql
+INSERT INTO mascota (id, nombre, añoNacimiento, detalleMascota_id, clientes_id)
+VALUES (1, 'NuevaMascota', 2020, 1, 1);
+```
+
+Leer todas las mascotas:
+
+```sql
+SELECT * FROM mascota;
+```
+
+Actualizar una mascota:
+
+```sql
+UPDATE mascota
+SET nombre = 'NombreActualizado', añoNacimiento = 2019, detalleMascota_id = 2, clientes_id = 2
+WHERE id = 1;
+```
+
+Eliminar una mascota:
+
+```sql
+DELETE FROM mascota WHERE id = 1;
+```
+</details>
+
+
+**Consultas tabla alergias_has_mascota**
+
+<details>
+<summary>CRUD</summary>
+Insertar una alergias_has_mascota:
+
+```sql
+INSERT INTO alergias_has_mascota (alergias_id, mascota_id) 
+VALUES (alergia_id_valor, mascota_id_valor);
+
+```
+
+Leer todas las alergias_has_mascota:
+
+```sql
+SELECT * FROM alergias_has_mascota;
+```
+
+Actualizar una alergias_has_mascota:
+
+```sql
+UPDATE alergias_has_mascota 
+SET alergias_id = nuevo_alergia_id, mascota_id = nueva_mascota_id 
+WHERE alergias_id = alergia_id_existente AND mascota_id = mascota_id_existente;
+```
+
+Eliminar una alergias_has_mascota:
+
+```sql
+DELETE FROM alergias_has_mascota 
+WHERE alergias_id = alergia_id_valor AND mascota_id = mascota_id_valor;
+```
+</details>
+
+
+**Consultas tabla citas**
+
+<details>
+<summary>CRUD</summary>
+Insertar una cita:
+
+```sql
+INSERT INTO citas (id, fecha_hora, estado, mascota_id, tipo)
+VALUES (cita_id_valor, 'fecha_hora_valor', 'estado_valor', mascota_id_valor, 'tipo_valor');
+```
+
+Leer todas las citas:
+
+```sql
+SELECT * FROM citas;
+```
+
+Actualizar una cita:
+
+```sql
+UPDATE citas SET fecha_hora = 'nueva_fecha_hora', estado = 'nuevo_estado', mascota_id = nuevo_mascota_id, tipo = 'nuevo_tipo'
+WHERE id = cita_id_existente;
+```
+
+Eliminar una cita:
+
+```sql
+DELETE FROM citas 
+WHERE id = cita_id_valor;
+```
+</details>
+
+
+**Consultas tabla servicios**
+
+<details>
+<summary>CRUD</summary>
+Insertar un servicio:
+
+```sql
+INSERT INTO servicios (id, fechaEjecucion, citas_id) 
+VALUES (servicio_id_valor, 'fecha_ejecucion_valor', cita_id_valor);
+```
+
+Leer todos los servicios:
+
+```sql
+SELECT * FROM servicios;
+```
+
+Actualizar un  servicio:
+
+```sql
+UPDATE servicios SET fechaEjecucion = 'nueva_fecha_ejecucion', citas_id = nueva_cita_id 
+WHERE id = servicio_id_existente;
+```
+
+Eliminar un servicio:
+
+```sql
+DELETE FROM servicios WHERE id = servicio_id_valor;
+```
+</details>
+
+**Consultas tabla historialmedico**
+
+<details>
+<summary>CRUD</summary>
+Insertar un historialmedico:
+
+```sql
+INSERT INTO historialmedico (id, motivoConsulta, peso, temperatura, diagnostico, servicios_id) VALUES (historial_id_valor, 'motivo_consulta_valor', peso_valor, temperatura_valor, 'diagnostico_valor', servicio_id_valor);
+```
+
+Leer todos los historialmedico:
+
+```sql
+SELECT * FROM historialmedico;
+```
+
+Actualizar un historialmedico:
+
+```sql
+UPDATE historialmedico SET motivoConsulta = 'nuevo_motivo_consulta', peso = nuevo_peso, temperatura = nueva_temperatura, diagnostico = 'nuevo_diagnostico', servicios_id = nuevo_servicio_id WHERE id = historial_id_existente;
+```
+
+Eliminar un historialmedico:
+
+```sql
+DELETE FROM historialmedico WHERE id = historial_id_valor;
+```
+</details>
+
+**Consultas tabla recetas**
+
+<details>
+<summary>CRUD</summary>
+Insertar una receta:
+
+```sql
+INSERT INTO recetas (medicamento_id, duracionTratamiento, recomendacionesConsumo, id) VALUES (medicamento_id_valor, duracion_tratamiento_valor, 'recomendaciones_consumo_valor', receta_id_valor);
+```
+
+Leer todas las recetas:
+
+```sql
+SELECT * FROM recetas;
+```
+
+Actualizar una receta:
+
+```sql
+UPDATE recetas SET medicamento_id = nuevo_medicamento_id, duracionTratamiento = nueva_duracion_tratamiento, recomendacionesConsumo = 'nuevas_recomendaciones_consumo' WHERE id = receta_id_existente;
+```
+
+Eliminar una receta:
+
+```sql
+DELETE FROM recetas WHERE id = receta_id_valor;
+```
+</details>
+
+**Consultas tabla detalleServicio**
+
+<details>
+<summary>CRUD</summary>
+Insertar un detalleServicio:
+
+```sql
+INSERT INTO detalleServicio (servicios_id, tipoServicios_id, empleados_id, recetas_id, link_resultados_examen, vacunas_id)
+VALUES (servicio_id_valor, tipo_servicio_id_valor, empleado_id_valor, receta_id_valor, 'link_resultados_examen_valor', vacuna_id_valor);
+```
+
+Leer todos los detalleServicio:
+
+```sql
+SELECT * FROM detalleServicio;
+```
+
+Actualizar un detalleServicio:
+
+```sql
+UPDATE detalleServicio
+SET servicios_id = nuevo_servicio_id, tipoServicios_id = nuevo_tipo_servicio_id, empleados_id = nuevo_empleado_id, recetas_id = nueva_receta_id, link_resultados_examen = 'nuevo_link_resultados_examen', vacunas_id = nueva_vacuna_id 
+WHERE servicios_id = servicio_id_existente AND tipoServicios_id = tipo_servicio_id_existente AND empleados_id = empleado_id_existente;
+```
+
+Eliminar un detalleServicio:
+
+```sql
+DELETE FROM detalleServicio 
+WHERE servicios_id = servicio_id_valor AND tipoServicios_id = tipo_servicio_id_valor AND empleados_id = empleado_id_valor;
+```
+</details>
+
