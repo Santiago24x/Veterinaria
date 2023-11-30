@@ -1,6 +1,7 @@
 use veterinaria;
 
- /* Insert Clientes */
+
+-- Insert Clientes
 INSERT INTO clientes (id, nombre, direccion, correoFacturacionElectronica, telefonoContacto)
 VALUES
   ('123456789', 'Juan Pérez', 'Calle 123, Bogotá', 'juan.perez@example.com', '+573182264480'),
@@ -14,7 +15,7 @@ VALUES
   ('901234567', 'Diego Castro', 'Avenida 123, Barranquilla', 'diego.castro@example.com', '+573456789018'),
   ('123456780', 'Carolina Jiménez', 'Carrera 456, Cartagena', NULL, '+573456789019');
 
- /* Insert alergias */
+-- Insert alergias
 INSERT INTO alergias (tipoAlergia, Nombre, descripcion, id)
 VALUES
   ('Alimentaria', 'Alergia a los lácteos', 'Intolerancia a la lactosa que causa malestar estomacal y diarrea.', 7),
@@ -62,29 +63,40 @@ VALUES
   ('Alimentaria', 'Alergia a nueces', 'Intolerancia a nueces que puede causar problemas gastrointestinales y erupciones cutáneas.', 49),
   ('Ambiental', 'Alergia al polvo', 'Reacción alérgica al polvo doméstico, provocando estornudos y congestión nasal.', 50);
 
- /* Inserts Vacunas */
- /* Inserts para perros */
+
+-- Inserts Vacunas
+
+-- Inserts para perros
 INSERT INTO vacunas (id, Nombre, Posologia, Descripcion, cantidad, precio) VALUES 
 (1, 'Nobivac DHPPi', 'Anual', 'Protección contra parvovirus, moquillo, hepatitis y parainfluenza en perros', 100, 130000),
 (2, 'Rabisin', 'Anual', 'Vacuna contra la rabia en perros', 150, 104000),
-/* (3, 'Bronchi-Shield ORAL', 'Semestral', 'Protección contra la tos de las perreras en perros', 120, 154000); Añade más vacunas para perros según sea necesario */
- /* Inserts para gatos */
+(3, 'Bronchi-Shield ORAL', 'Semestral', 'Protección contra la tos de las perreras en perros', 120, 154000);
+-- Añade más vacunas para perros según sea necesario
+
+-- Inserts para gatos
 INSERT INTO vacunas (id, Nombre, Posologia, Descripcion, cantidad, precio) VALUES 
 (4, 'Purevax Feline 3', 'Anual', 'Protección contra la rinotraqueitis, calicivirus y panleucopenia en gatos', 100, 162000),
 (5, 'FeLV', 'Anual', 'Vacuna contra el virus de la leucemia felina en gatos', 80, 218000),
-(6, 'FIP', 'Anual', 'Vacuna contra la peritonitis infecciosa felina en gatos', 90, 189000); 
- /* Inserts para aves */
+(6, 'FIP', 'Anual', 'Vacuna contra la peritonitis infecciosa felina en gatos', 90, 189000);
+-- Añade más vacunas para gatos según sea necesario
+
+-- Inserts para aves
 INSERT INTO vacunas (id, Nombre, Posologia, Descripcion, cantidad, precio) VALUES 
 (7, 'AviPro MeganVac 1', 'Anual', 'Protección contra diversas enfermedades en aves', 200, 59000),
-(8, 'Poxine', 'Anual', 'Vacuna contra la viruela aviar en aves', 180, 74500); 
- /* Inserts para hámsters */
-INSERT INTO vacunas (id, Nombre, Posologia, Descripcion, cantidad, precio) VALUES 
-(9, 'HamsterGuard', 'Semestral', 'Vacuna para prevenir enfermedades comunes en hámsters', 50, 29000); 
- /* Inserts para peces */
-INSERT INTO vacunas (id, Nombre, Posologia, Descripcion, cantidad, precio) VALUES 
-(10, 'Finquel', 'Anual', 'Vacuna para prevenir enfermedades en peces tropicales', 30, 8500); 
+(8, 'Poxine', 'Anual', 'Vacuna contra la viruela aviar en aves', 180, 74500);
+-- Añade más vacunas para aves según sea necesario
 
- /* Inserts adicionales para completar 20 */
+-- Inserts para hámsters
+INSERT INTO vacunas (id, Nombre, Posologia, Descripcion, cantidad, precio) VALUES 
+(9, 'HamsterGuard', 'Semestral', 'Vacuna para prevenir enfermedades comunes en hámsters', 50, 29000);
+-- Añade más vacunas para hámsters según sea necesario
+
+-- Inserts para peces
+INSERT INTO vacunas (id, Nombre, Posologia, Descripcion, cantidad, precio) VALUES 
+(10, 'Finquel', 'Anual', 'Vacuna para prevenir enfermedades en peces tropicales', 30, 8500);
+-- Añade más vacunas para peces según sea necesario
+
+-- Inserts adicionales para completar 20
 INSERT INTO vacunas (id, Nombre, Posologia, Descripcion, cantidad, precio) VALUES 
 (11, 'Leptoferm-4', 'Anual', 'Protección contra la leptospirosis en perros', 110, 98000),
 (12, 'Fel-O-Vax PCT', 'Anual', 'Vacuna para la prevención de clamidia en gatos', 75, 135000),
@@ -112,7 +124,8 @@ INSERT INTO vacunas (id, Nombre, Posologia, Descripcion, cantidad, precio) VALUE
 (34, 'GuineaPigGuard', 'Semestral', 'Vacuna para cobayas', 45, 32000),
 (35, 'FreshwaterFishDefense', 'Anual', 'Vacuna para peces de agua dulce', 25, 8800);
 
- /* Insert Medicamentos */
+
+-- Insert Medicamentos
 
 INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Precio, cantidad) VALUES
 (1, 'Carprofeno Tableta', '1 tableta cada 12 horas', 'Antiinflamatorio no esteroideo (AINE)', '50 mg', 25000.0, 100),
@@ -126,7 +139,8 @@ INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Pre
 (9, 'Tepoxalina Tableta', '1 tableta cada 24 horas', 'Antiinflamatorio no esteroideo (AINE)', '30 mg', 15500.0, 80),
 (10, 'Tolfenamico Jarabe', '2 ml cada 24 horas', 'Antiinflamatorio no esteroideo (AINE)', '20 mg/ml', 28000.0, 65);
 
- /* Antibióticos */
+
+-- Antibióticos
 INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Precio, cantidad) VALUES
 (11, 'Amoxicilina Tableta', '1/2 tableta cada 12 horas', 'Antibiótico penicilínico', '500 mg', 14500.0, 60),
 (12, 'Cefalexina Jarabe', '1 ml cada 24 horas', 'Antibiótico cefalosporínico', '125 mg/ml', 16000.0, 70),
@@ -138,7 +152,8 @@ INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Pre
 (18, 'Trimetoprima-sulfametoxazol Jarabe', '1.5 ml cada 24 horas', 'Antibiótico combinado', '160/800 mg/ml', 17500.0, 75),
 (19, 'Cefovecina Tableta', '1 tableta cada 24 horas', 'Antibiótico cefalosporínico', '80 mg', 23200.0, 60),
 (20, 'Cefpodoxima Jarabe', '2 ml cada 24 horas', 'Antibiótico cefalosporínico', '100 mg/ml', 26500.0, 55);
- /* Antiparasitarios */
+
+-- Antiparasitarios
 INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Precio, cantidad) VALUES
 (21, 'Ivermectina Tableta', '1 tableta cada 15 días', 'Antiparasitario macrocíclico', '6 mg', 22000.0, 30),
 (22, 'Praziquantel Jarabe', '1.5 ml cada 3 meses', 'Antiparasitario antihelmíntico', '50 mg/ml', 25500.0, 25),
@@ -150,7 +165,8 @@ INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Pre
 (28, 'Moxidectina Jarabe', '1 ml cada 60 días', 'Antiparasitario endectocida', '30 mg/ml', 24700.0, 30),
 (29, 'Nitroscanato Tableta', '1 tableta cada 3 meses', 'Antiparasitario antihelmíntico', '200 mg', 14300.0, 40),
 (30, 'Febantel Jarabe', '1 ml cada 4 meses', 'Antiparasitario antihelmíntico', '150 mg/ml', 21000.0, 35);
- /* Antihistamínicos */
+
+-- Antihistamínicos
 INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Precio, cantidad) VALUES
 (31, 'Clorfeniramina Jarabe', '2 ml cada 12 horas', 'Antihistamínico', '1 mg/ml', 12500.0, 45),
 (32, 'Diphenhydramine Crema', 'Aplicar una capa fina cada 8 horas', 'Antihistamínico tópico', '5 mg/g', 14800.0, 55),
@@ -159,7 +175,8 @@ INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Pre
 (35, 'Clemastina Crema', 'Aplicar una capa fina cada 12 horas', 'Antihistamínico tópico', '2 mg/g', 19700.0, 40),
 (36, 'Hidroxizina Tableta', '1/2 tableta cada 8 horas', 'Antihistamínico', '10 mg', 15900.0, 35),
 (37, 'Prometazina Jarabe', '1.5 ml cada 12 horas', 'Antihistamínico', '12.5 mg/ml', 13400.0, 30);
- /* Antiparasitarios */
+
+-- Antiparasitarios
 INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Precio, cantidad) VALUES
 (38, 'Albendazol Tableta', '1/2 tableta cada 3 meses', 'Antiparasitario antihelmíntico', '200 mg', 17500.0, 25),
 (39, 'Fenbendazol Jarabe', '2 ml cada 2 meses', 'Antiparasitario antihelmíntico', '50 mg/ml', 21000.0, 20),
@@ -169,7 +186,8 @@ INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Pre
 (43, 'Nitroscanato Tableta', '1/4 tableta cada 3 meses', 'Antiparasitario antihelmíntico', '200 mg', 14300.0, 40),
 (44, 'Piperazina Jarabe', '2 ml cada 3 meses', 'Antiparasitario antihelmíntico', '150 mg/ml', 17000.0, 30);
 
- /* Antifúngicos */
+
+-- Antifúngicos
 INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Precio, cantidad) VALUES
 (45, 'Clotrimazol Crema', 'Aplicar una capa fina cada 12 horas', 'Antifúngico tópico', '1 mg/g', 16800.0, 45),
 (46, 'Fluconazol Tableta', '1/2 tableta cada 24 horas', 'Antifúngico sistémico', '100 mg', 19500.0, 30),
@@ -182,7 +200,8 @@ INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Pre
 (53, 'Griseofulvina Tableta', '1 tableta diaria', 'Antifúngico sistémico', '250 mg', 20500.0, 25),
 (54, 'Natamicina Crema', 'Aplicar una capa fina cada 8 horas', 'Antifúngico tópico', '5 mg/g', 19700.0, 30);
 
- /* Vitaminas */
+
+-- Vitaminas
 INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Precio, cantidad) VALUES
 (55, 'Complejo B Tableta', '1 tableta diaria', 'Suplemento vitamínico', 'Varias vitaminas', 12000.0, 50),
 (56, 'Vitamina C Jarabe', '2 ml diarios', 'Suplemento vitamínico', '10 mg/ml', 13500.0, 40),
@@ -195,7 +214,8 @@ INSERT INTO medicamentos (id, nombre, Posologia, Descripcion, concentracion, Pre
 (63, 'Niacina Tableta', '1 tableta diaria', 'Suplemento vitamínico', '50 mg', 20000.0, 20),
 (64, 'Ácido pantoténico Crema', 'Aplicar una capa fina cada 8 horas', 'Suplemento vitamínico', '5 mg/g', 21500.0, 15);
 
- /* Inserts detalleMascota */
+
+-- Inserts detalleMascota
 
 INSERT INTO detalleMascota (id, tipo, raza) VALUES
 (1, 'perro', 'Labrador Retriever'),
@@ -239,8 +259,10 @@ INSERT INTO detalleMascota (id, tipo, raza) VALUES
 (39, 'pez', 'Pez Goldfish'),
 (40, 'pez', 'Pez Neón');
 
- /* Inserts Mascota  */
- /* Inserts modificados para la tabla mascota */
+
+-- Inserts Mascota 
+
+-- Inserts modificados para la tabla mascota
 INSERT INTO mascota (id, nombre, añoNacimiento, detalleMascota_id, clientes_id) VALUES
 (1, 'Max', 2019, 1, 123456789),
 (2, 'Carecrimen', 2020, 25, 234567890), 
@@ -253,38 +275,42 @@ INSERT INTO mascota (id, nombre, añoNacimiento, detalleMascota_id, clientes_id)
 (9, 'Milo', 2012, 9, 901234567),
 (10, 'quien', 2011, 10, 123456780);
 
- /* Inserts Alergias_has_Mascota */
- /* Alergias asociadas a mascota Max (ID: 1) */
-INSERT INTO alergias_has_mascota (alergias_id, mascota_id) VALUES
-(7, 1),  
-(8, 1),  
-(9, 1),  
-(10, 1);
 
- /* Alergias asociadas a mascota Carecrimen (ID: 2) */
-INSERT INTO alergias_has_mascota (alergias_id, mascota_id) VALUES
-(27, 2), 
-(28, 2), 
-(29, 2),
-(30, 2); 
- 
- /* Alergias asociadas a mascota Sunshine (ID: 3) */
-INSERT INTO alergias_has_mascota (alergias_id, mascota_id) VALUES
-(13, 3), 
-(14, 3), 
-(15, 3), 
-(16, 3); 
+-- Inserts Alergias_has_Mascota
 
- /* Alergias asociadas a mascota Rocky (ID: 4) */
+-- Alergias asociadas a mascota Max (ID: 1)
 INSERT INTO alergias_has_mascota (alergias_id, mascota_id) VALUES
-(43, 4), 
-(44, 4), 
-(45, 4), 
-(46, 4); 
+(7, 1),  -- Alergia a los lácteos
+(8, 1),  -- Alergia al polvo
+(9, 1),  -- Alergia a las avispas
+(10, 1); -- Alergia a la aspirina
+
+-- Alergias asociadas a mascota Carecrimen (ID: 2)
+INSERT INTO alergias_has_mascota (alergias_id, mascota_id) VALUES
+(27, 2), -- Alergia a mosquitos
+(28, 2), -- Alergia a antidepresivos
+(29, 2), -- Alergia a látex de caucho
+(30, 2); -- Alergia a metales no ferrosos
+
+-- Alergias asociadas a mascota Sunshine (ID: 3)
+INSERT INTO alergias_has_mascota (alergias_id, mascota_id) VALUES
+(13, 3), -- Alergia al gluten
+(14, 3), -- Alergia al moho
+(15, 3), -- Alergia a las pulgas
+(16, 3); -- Alergia a antibióticos
+
+-- Alergias asociadas a mascota Rocky (ID: 4)
+INSERT INTO alergias_has_mascota (alergias_id, mascota_id) VALUES
+(43, 4), -- Alergia a mariscos
+(44, 4), -- Alergia a esporas de hongos
+(45, 4), -- Alergia a mosquitos
+(46, 4); -- Alergia a antihistamínicos
 
 
- /* Inserts Empleados  */
- /* Veterinarios */
+
+-- Inserts Empleados 
+
+-- Veterinarios
 INSERT INTO empleados (id, nombre, apellidos, cargo, especialidad, telefono, correo) VALUES
 (1, 'Dr. Juan', 'Pérez', 'Veterinario', 'Cirugía', '+573182264480', 'juan.perez@example.com'),
 (2, 'Dr. María', 'Rodríguez', 'Veterinario', 'Dermatología', '+573245678901', 'maria.rodriguez@example.com'),
@@ -294,26 +320,28 @@ INSERT INTO empleados (id, nombre, apellidos, cargo, especialidad, telefono, cor
 (6, 'Dr. Ana', 'López', 'Veterinario', 'Cardiología', NULL, 'ana.lopez@example.com'),
 (7, 'Dr. Pedro', 'Ramírez', 'Veterinario', 'Rehabilitación Física', '+573456789016', 'pedro.ramirez@example.com'),
 (8, 'Dr. Sofía', 'Herrera', 'Veterinario', 'Oncología', NULL, 'sofia.herrera@example.com');
- /* Auxiliares de Ortodoncia (Máximo 2) */
+
+-- Auxiliares de Ortodoncia (Máximo 2)
 INSERT INTO empleados (id, nombre, apellidos, cargo, especialidad, telefono, correo) VALUES
 (9, 'Laura', 'Ortega', 'Auxiliar', 'Ortodoncia', NULL, 'laura.ortega@example.com'),
 (10, 'Juan', 'Díaz', 'Auxiliar', 'Ortodoncia', NULL, 'juan.diaz@example.com');
- /* Esteticistas */
+
+-- Esteticistas
 INSERT INTO empleados (id, nombre, apellidos, cargo, especialidad, telefono, correo) VALUES
 (11, 'Elena', 'Martínez', 'Esteticista', NULL, '+573456789015', 'elena.martinez@example.com'),
 (12, 'Javier', 'Gómez', 'Esteticista', NULL, '+573456789017', 'javier.gomez@example.com'),
 (13, 'Isabel', 'Sánchez', 'Esteticista', NULL, '+573456789018', 'isabel.sanchez@example.com'),
 (14, 'Diego', 'Fernández', 'Esteticista', NULL, '+573456789019', 'diego.fernandez@example.com'),
 (15, 'Lorena', 'Ramírez', 'Esteticista', NULL, '+573456789020', 'lorena.ramirez@example.com');
- /* Auxiliares Generales (Estos vacunan, desparacitan) */
+
+-- Auxiliares Generales (Estos vacunan, desparacitan)
 INSERT INTO empleados (id, nombre, apellidos, cargo, especialidad, telefono, correo) VALUES
 (16, 'Sara', 'González', 'Auxiliar', NULL, '+573456789021', 'sara.gonzalez@example.com'),
 (17, 'Martín', 'Hernández', 'Auxiliar', NULL, '+573456789022', 'martin.hernandez@example.com'),
 (18, 'Camila', 'López', 'Auxiliar', NULL, '+573456789023', 'camila.lopez@example.com'),
 (19, 'Alejandro', 'Díaz', 'Auxiliar', NULL, '+573456789024', 'alejandro.diaz@example.com');
 
-
- /* Inserts tipoServicio */
+-- Inserts tipoServicio
 INSERT INTO tipoServicios (id, nombre, categoria, descripcion, precio, prestadorServicio, direccionPrestadorServicio) VALUES 
 (1, 'Corte y cepillado perro raza pequeña', 'Estetica', 'Cuida el estilo de tu pequeño amigo con nuestro servicio de corte y cepillado. Productos no invasivos para un look impecable.', 20000.0, 'Mi Primera Mascotica', 'Calle 10 Norte #11-29'),
 (2, 'Corte y cepillado perro raza mediana', 'Estetica', 'Estilo único para tu perro de raza mediana con nuestro corte y cepillado. Productos no invasivos y amor a raudales.', 25000.0, 'Mi Primera Mascotica', 'Calle 10 Norte #11-29'),
@@ -454,4 +482,90 @@ INSERT INTO tipoServicios (id, nombre, categoria, descripcion, precio, prestador
 (137, 'Cirugía de Patas y Garras perro', 'Quirurgicos', 'Brindamos cirugía especializada de patas y garras para perros, abordando diversas afecciones médicas en estas áreas. Los procedimientos son realizados en "Mi Primera Mascotica".', 65000.0, 'Mi Primera Mascotica', 'Calle 10 Norte #11-29'),
 (138, 'Cirugía de Patas y Garras gato', 'Quirurgicos', 'Brindamos cirugía especializada de patas y garras para gatos, abordando diversas afecciones médicas en estas áreas. Los procedimientos son realizados en "Mi Primera Mascotica".', 60000.0, 'Mi Primera Mascotica', 'Calle 10 Norte #11-29'),
 (139, 'Cirugía de Patas y Garras ave domestica', 'Quirurgicos', 'Ofrecemos cirugía especializada de patas y garras para aves domésticas, abordando diversas afecciones médicas en estas áreas. Los procedimientos son realizados en "Mi Primera Mascotica".', 55000.0, 'Mi Primera Mascotica', 'Calle 10 Norte #11-29'),
-(140, 'Cirugía de Pico aves domésticas', 'Quirurgicos', 'Proporcionamos cirugía especializada de pico para aves domésticas, abordando diversas afecciones médicas en esta área. Los procedimientos son realizados en "Mi Primera Mascotica".', 50000.0, 'Mi Primera Mascotica', 'Calle 10 Norte #11-29');
+(140, 'Cirugía de Pico aves domésticas', 'Quirurgicos', 'Proporcionamos cirugía especializada de pico para aves domésticas, abordando diversas afecciones médicas en esta área. Los procedimientos son realizados en "Mi Primera Mascotica".', 50000.0, 'Mi Primera Mascotica', 'Calle 10 Norte #11-29'),
+(141, 'Consulta para Aves Domésticas', 'Consultas', 'Consulta veterinaria para aves domésticas', 30000.00, 'Mi Primera Mascotica', 'Calle 10 Norte #11-29'),
+(142, 'Consulta para Peces', 'Consultas', 'Consulta veterinaria para peces', 40000.00, 'Mi Primera Mascotica', 'Calle 10 Norte #11-29'),
+(143, 'Consulta para Perros', 'Consultas', 'Consulta veterinaria para perros', 60000.00, 'Mi Primera Mascotica', 'Calle 10 Norte #11-29'),
+(144, 'Consulta para Gatos', 'Consultas', 'Consulta veterinaria para gatos', 55000.00, 'Mi Primera Mascotica', 'Calle 10 Norte #11-29'),
+(145, 'Consulta para Hamsters', 'Consultas', 'Consulta veterinaria para hamsters', 25000.00, 'Mi Primera Mascotica', 'Calle 10 Norte #11-29');
+
+
+-- Falta Insertar 
+-- Inserts Citas
+
+INSERT INTO citas (id, fecha_hora, estado, mascota_id, tipo) VALUES
+(1, '2023-01-15 10:00:00', 'completada', 1, 'prioritaria'),
+(2, '2023-02-20 14:30:00', 'pendiente', 2, 'comun'),
+(3, '2023-03-10 11:45:00', 'completada', 3, 'prioritaria'),
+(4, '2023-04-05 16:20:00', 'pendiente', 4, 'comun'),
+(5, '2023-05-12 09:15:00', 'cancelada', 5, NULL),
+(6, '2023-06-18 13:00:00', 'pendiente', 6, 'comun'),
+(7, '2023-07-03 15:30:00', 'pendiente', 7, NULL),
+(8, '2023-08-22 12:45:00', 'pendiente', 8, 'prioritaria'),
+(9, '2023-09-07 08:30:00', 'completada', 9, 'comun'), 
+(10, '2023-10-14 17:10:00', 'pendiente', 10, NULL),
+(11, '2023-11-05 09:45:00', 'completada', 1, 'comun'),
+(12, '2023-12-12 14:15:00', 'completada', 2, NULL),
+(13, '2024-01-20 11:30:00', 'completada', 3, 'prioritaria'),
+(14, '2024-02-08 16:00:00', 'completada', 4, 'comun'),
+(15, '2024-03-25 10:20:00', 'completada', 5, 'comun');
+
+-- Inserts Servicios
+INSERT INTO servicios (id, fechaEjecucion, citas_id) VALUES
+(1, '2023-01-15', 1),
+(3, '2023-03-10', 3),
+(9, '2023-09-07', 9),
+(11, '2023-11-05', 11),
+(12, '2023-12-12', 12),
+(13, '2024-01-20', 13),
+(14, '2024-02-08', 14),
+(15, '2024-03-25', 15);
+
+
+-- Inserts Recetas
+-- Insertar receta con medicamento Ketoprofeno Crema (id 7)
+INSERT INTO recetas (medicamento_id, duracionTratamiento, recomendacionesConsumo, id)
+VALUES (7, 14, 'Aplicar una capa fina de crema en la zona afectada dos veces al día', 1);
+
+
+-- Insertar receta con medicamento Riboflavina Jarabe (id 62)
+INSERT INTO recetas (medicamento_id, duracionTratamiento, recomendacionesConsumo, id)
+VALUES (62, 21, 'Tomar 1 ml del jarabe diariamente después de las comidas', 3);
+
+-- Insertar receta con medicamento Trimetropina Jarabe (id 18)
+INSERT INTO recetas (medicamento_id, duracionTratamiento, recomendacionesConsumo, id)
+VALUES (18, 10, 'Tomar 10 ml del jarabe cada 8 horas con alimentos', 2);
+
+
+
+
+-- Inserts detalleServicio
+INSERT INTO detalleServicio (servicios_id, tipoServicios_id, empleados_id, recetas_id, link_resultados_examen, vacunas_id) VALUES 
+(1, 91, 16, null, null, 31),
+(1, 95, 16, null, null, null),
+(3, 135, 1, null, null, null),
+(3, 139, 1, 3, null, null),
+(3, 139, 1, 1, null, null),
+(9, 78, 11, null, null, null),
+(11, 19, 14, null, null, null),
+(11, 11, 14, null, null, null),
+(11, 88, 14, null, null, null),
+(12, 19, 15, null, null, null),
+(12, 11, 15, null, null, null),
+(12, 88, 14, null, null, null),
+(13, 141, 5, 3, null, null),
+(15, 142, 2, null, null, null);
+
+
+-- Inserts historialmedico
+INSERT INTO historialmedico (id, motivoConsulta, peso, temperatura, diagnostico, servicios_id)
+VALUES
+  (1, 'La mascota viene para ser desparasitado y vacunado ya que no estaba consumiendo alimentos', 5.75, 38.5, 'Gastroenteritis leve', 1),
+  (2, 'Mascota llega lesionada en su pata derecha dice su dueño que esto ocurrio por un ataque de un felino', 8.20, 37.2, 'Esguince en la pata', 3),
+  (3, 'El cliente ve a su mascota muy estresada y decide traerla para que esta tenga una seccion de spa y relajacion', 1.50, 39.0, 'Estres', 9),
+  (4, 'La mascota nos visita para realizar procedimientos de estetica como baño, corte estilizado y recorte de uñas ya que ha presentado lesiones por ello', 6.80, 37.8, 'Se prestara servicios de estetica', 11),
+  (5, 'La mascota nos visita para realizar procedimientos de estetica como baño, corte estilizado y recorte de uñas', 10.30, 38.7, 'Se prestara servicios de estetica', 12),
+  (6, 'El canario posee problemas con alimentacion, se le torna desanimado', 10.30, 38.7, 'Infección respiratoria', 13),
+  (7, 'El canino nos visita para realizar una verificacion de posibles enfermedad en la piel', 10.30, 38.7, 'No posee ninguna irregularidad simplemente es una escamacion por desaseo en su pecera ', 15);
+
+
